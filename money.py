@@ -23,6 +23,7 @@ class Currency():
         pass
 
     def __str__(self):
+        
         """
         Should return the currency code, or code with symbol in parentheses.
         """
@@ -37,12 +38,15 @@ class Currency():
                 self.digits == other.digits)
 
 
-class Money:
+class Money():
+
     """
     Represents an amount of money. Requires an amount and a currency.
     """
 
     def __init__(self, amount, currency):
+        self.amount = amount
+        self.currency = currency
         """
         Parameters:
         - amount -- quantity of currency
