@@ -2,14 +2,19 @@ class DifferentCurrencyError(Exception):
     pass
 
 
-class Currency:
+class Currency():
     """
     Represents a currency. Does not contain any exchange rate info.
     """
 
     def __init__(self, name, code, symbol=None, digits=2):
+        self.name = name
+        self.code = code
+        self.symbol = symbol
+        self.digits = digits
         """
         Parameters:
+        
         - name -- the English name of the currency
         - code -- the ISO 4217 three-letter code for the currency
         - symbol - optional symbol used to designate currency
